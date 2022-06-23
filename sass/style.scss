@@ -6,6 +6,7 @@ body {
 
 .container {
     max-width: 1200px;
+    padding: 20px;
     margin: 0 auto;
 }
 
@@ -16,6 +17,26 @@ body {
     font-style: normal;
     color: rgb(220, 220, 220);
     text-align: center;
+
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.textContent {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    padding: 30px 0;
+    font-style: normal;
+    color: rgb(220, 220, 220);
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
 }
 
 .article {
@@ -26,7 +47,7 @@ body {
     margin-bottom: 20px;
 
     background: rgba(0, 0, 0, 0.08);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -61,17 +82,24 @@ body {
     font-size: 24px;
     margin: 0 10px;
 
+    @media screen and (max-width: 767px) {
+        font-size: 18px;
+    }
 }
 .aticleDate {
     font-size: 14px;
     margin-bottom: 0;
     margin: 0 10px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+    }
 }
 
-@import './modules/header.scss';
+@import "./modules/header.scss";
 
-@import './modules/main.scss';
+@import "./modules/main.scss";
 
-@import './modules/news.scss';
+@import "./modules/news.scss";
 
-@import './modules/newsblock.scss';
+@import "./modules/newsblock.scss";

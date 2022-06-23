@@ -28,14 +28,6 @@
   color: rgb(220, 220, 220);
   text-align: center;
 }
-.webnews__kontent {
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 400;
-  padding: 30px 0;
-  font-style: normal;
-  color: rgb(220, 220, 220);
-}
 .webnews__customtitle {
   text-align: left;
 }

@@ -66,6 +66,7 @@ body {
 
 .container {
   max-width: 1200px;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -76,6 +77,27 @@ body {
   font-style: normal;
   color: rgb(220, 220, 220);
   text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.textContent {
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  padding: 30px 0;
+  font-style: normal;
+  color: rgb(220, 220, 220);
+}
+@media screen and (max-width: 767px) {
+  .textContent {
+    font-size: 16px;
+  }
 }
 
 .article {
@@ -125,11 +147,21 @@ body {
   font-size: 24px;
   margin: 0 10px;
 }
+@media screen and (max-width: 767px) {
+  .articleTitle {
+    font-size: 18px;
+  }
+}
 
 .aticleDate {
   font-size: 14px;
   margin-bottom: 0;
   margin: 0 10px;
+}
+@media screen and (max-width: 767px) {
+  .aticleDate {
+    font-size: 12px;
+  }
 }
 
 .header {
@@ -155,6 +187,7 @@ body {
   background: rgba(23, 23, 23, 0.922);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  padding: 0;
   overflow: hidden;
   border-bottom: 4px solid #c11a19;
 }
@@ -259,7 +292,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 340px;
   margin: 0 auto 40px auto;
   position: relative;
   z-index: 1;
@@ -311,6 +344,16 @@ body {
   font-style: normal;
   color: #171717;
 }
+@media screen and (max-width: 767px) {
+  .main__redSquare {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+  }
+  .main__redSquare span {
+    font-size: 32px;
+  }
+}
 .main__decryption {
   display: inline-block;
   font-family: "Montserrat";
@@ -323,6 +366,12 @@ body {
           transform: translateX(-150%);
   position: relative;
   z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  .main__decryption {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 @-webkit-keyframes decryptionAnim {
   from {
@@ -353,6 +402,11 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .main__description {
+    font-size: 24px;
+  }
 }
 
 .news {
@@ -395,14 +449,6 @@ body {
   font-style: normal;
   color: rgb(220, 220, 220);
   text-align: center;
-}
-.webnews__kontent {
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 400;
-  padding: 30px 0;
-  font-style: normal;
-  color: rgb(220, 220, 220);
 }
 .webnews__customtitle {
   text-align: left;
