@@ -1,0 +1,10 @@
+.news {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  background: rgb(23, 23, 23);
+  border-top: 2px solid #c11a19;
+}
+.news__articles {
+  margin-top: 30px;
+}

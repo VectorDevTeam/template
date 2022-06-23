@@ -1,0 +1,47 @@
+.webnews {
+    padding-top: 50px;
+    width: 100%;
+
+    // КОМЕНТАРИЙ ЗАГОЛОВКА НОВОСТЕЙ
+    &__subtitle {
+        font-size: 24px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(220, 220, 220);
+        text-align: center;
+        border-bottom: 3px #c11a19 solid;
+        height: 150px;
+        margin-bottom: 10px;
+
+    }
+
+    // ЗАГОЛОВОК БЛОКА С НОВОСТЯМИ
+    &__title {
+        display: flex;
+        justify-content: center;
+
+        padding: 100px 0 20px 0;
+        font-family: "Montserrat";
+        font-size: 52px;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(220, 220, 220);
+        text-align: center;
+    }
+    &__kontent {
+        
+        font-size: 24px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        padding: 30px 0;
+        font-style: normal;
+        color: rgb(220, 220, 220);
+    }
+    &__customtitle {
+        text-align: left;
+    }
+}
+.imagenews{
+    width: 100%;
+}
