@@ -19,6 +19,9 @@
         padding: 0;
         overflow: hidden;
 
+        position: relative;
+        z-index: 99;
+
         border-bottom: 4px solid #c11a19;
     }
 
@@ -31,6 +34,9 @@
     // .header__nav
 
     &__nav {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 
     &__navLink {
@@ -77,6 +83,10 @@
         height: 100%;
 
         position: relative;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 
     &__searchBtn {
@@ -111,5 +121,110 @@
 
         position: relative;
         z-index: 11;
+    }
+
+    // .header__burger
+
+    &__burger {
+        display: none;
+        width: 50px;
+        height: 100%;
+        padding: 5px;
+
+        background: #c11a19;
+        border: none;
+        outline: none;
+
+        transition: all .5s ease;
+
+        & span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            margin-bottom: 10px;
+
+            background: #fff;
+            border-radius: 2px;
+
+            transition: all .5s ease;
+        }
+
+        &.active {
+            padding-left: 10px;
+        }
+
+        &.active span {
+            transform-origin: 8px 2px;
+            background: rgb(42, 42, 42);
+
+            transform: rotate(45deg);
+        }
+
+        &.active span:nth-child(2) {
+            display: none;
+        }
+
+        &.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        & span:nth-child(3) {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    &__burgerMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 250vh;
+        padding: 20px;
+
+        background: rgba(23, 23, 23, 0.922);
+        backdrop-filter: blur(3px);
+
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 90;
+
+        transform: translateY(-200%);
+        opacity: 0;
+        transition: all 1s ease;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    // .header__burgerNav
+
+    &__burgerNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+
+        & a {
+            margin-left: 0;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // .header__burgerSearch
+
+    &__burgerSearch {
+        display: flex;
+        height: 50px;
     }
 }

@@ -11,6 +11,26 @@
     <body>
             <!-- OPEN HEADER -->
             <header class="header">
+
+                <div id="menu" class="header__burgerMenu">
+                    <nav class="header__nav header__burgerNav">
+                        <a href="#" class="header__navLink">Главная</a>
+                        <a href="news.html" class="header__navLink">Новости</a>
+                        <a href="#" class="header__navLink">ПДД</a>
+                        <a href="#" class="header__navLink">Тесты</a>
+                    </nav>
+                    <div class="header__search header__burgerSearch">
+                        <input
+                            type="text"
+                            class="header__searchInput"
+                            placeholder="Найти на сайте"
+                        />
+                        <button id="searchBtn" class="header__searchBtn">
+                            <img src="./img/search.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
                 <div class="header__container container">
                     <div class="header__logo">
                         <img src="./img/Logo.svg" alt="">
@@ -31,6 +51,14 @@
                             <img src="./img/search.svg" alt="">
                         </button>
                     </div>
+                    
+                    <button id="burger" class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    
             </header>
             <!-- CLOSE HEADER -->
 
@@ -124,7 +152,9 @@
             <footer class="footer">
                 <div class="container">
                     <div class="footer__flex">
-                        <div class="footer__logo"></div>
+                        <div class="footer__logo">
+                            <img src="./img/LogoFooter.svg" alt="">
+                        </div>
                         <nav class="footer__nav">
                             <a href="#" class="footer__navLink">Главная</a>
                             <a href="news.html" class="footer__navLink">Новости</a>
@@ -132,12 +162,13 @@
                             <a href="#" class="footer__navLink">Тесты</a>
                         </nav>
                         <div class="footer__aboutLink">
-                            <span>About НДД</span>
+                            <a href="#">Про нас</a>
                         </div>
                     </div>
                     <span class="footer__line"></span>
                     <div class="footer__flex">
-                        
+                        <span class="footer__copyright">Сopyright © 2022 НДД.</span>
+                        <a href="#" class="footer__privacy">Политика конфиденциальности</a>
                     </div>
                 </div>
             </footer>
