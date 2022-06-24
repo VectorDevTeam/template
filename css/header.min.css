@@ -82,7 +82,7 @@
   width: 0;
   height: 0;
   position: absolute;
-  top: 26px;
+  top: 30px;
   left: 0;
   z-index: 99;
   list-style: none;
@@ -96,18 +96,67 @@
 }
 .header__navLink.ulNav ul li {
   opacity: 0;
-  -webkit-transition: all 0.5s ease 0.5s;
-  -o-transition: all 0.5s ease 0.5s;
-  transition: all 0.5s ease 0.5s;
+  -webkit-transition: all 0.5s ease 0.75s;
+  -o-transition: all 0.5s ease 0.75s;
+  transition: all 0.5s ease 0.75s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+.header__navLink.ulNav:hover::after {
+  width: 0;
 }
 .header__navLink.ulNav:hover ul {
-  padding: 10px;
-  width: 350px;
-  height: 170px;
-  border: 1px solid #c11a19;
+  -webkit-animation: ulAnim 1s ease forwards;
+          animation: ulAnim 1s ease forwards;
 }
 .header__navLink.ulNav:hover ul li {
   opacity: 1;
+}
+@-webkit-keyframes ulAnim {
+  0% {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  50% {
+    padding: 0;
+    width: 350px;
+    height: 0;
+    border-top: 1px solid #c11a19;
+  }
+  100% {
+    padding: 10px;
+    width: 350px;
+    height: 210px;
+    border: 1px solid #c11a19;
+  }
+}
+@keyframes ulAnim {
+  0% {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  50% {
+    padding: 0;
+    width: 350px;
+    height: 0;
+    border-top: 1px solid #c11a19;
+  }
+  100% {
+    padding: 10px;
+    width: 350px;
+    height: 210px;
+    border: 1px solid #c11a19;
+  }
 }
 .header__ulLink {
   font-family: "Montserrat";
@@ -277,6 +326,74 @@
 }
 .header__burgerNav a:last-child {
   margin-bottom: 0;
+}
+.header__burgerNav span {
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+.header__burgerNav > .ulNav {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.header__burgerNav > .ulNav ul {
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+.header__burgerNav > .ulNav ul li {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.header__burgerNav > .ulNav ul li a {
+  font-size: 12px;
+}
+.header__burgerNav > .ulNav:hover ul {
+  -webkit-animation: ulAnimBurger 1s ease forwards;
+          animation: ulAnimBurger 1s ease forwards;
+}
+.header__burgerNav > .ulNav:hover ul li {
+  opacity: 1;
+}
+@-webkit-keyframes ulAnimBurger {
+  0% {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  50% {
+    padding: 0;
+    width: 200px;
+    height: 0;
+    border-top: 1px solid #c11a19;
+  }
+  100% {
+    padding: 10px;
+    width: 200px;
+    height: 130px;
+    border: 1px solid #c11a19;
+  }
+}
+@keyframes ulAnimBurger {
+  0% {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  50% {
+    padding: 0;
+    width: 200px;
+    height: 0;
+    border-top: 1px solid #c11a19;
+  }
+  100% {
+    padding: 10px;
+    width: 200px;
+    height: 130px;
+    border: 1px solid #c11a19;
+  }
 }
 .header__burgerSearch {
   display: -webkit-box;
