@@ -11,29 +11,16 @@
         color: rgb(220, 220, 220);
         text-align: center;
         border-bottom: 3px #c11a19 solid;
-        height: 150px;
+        padding-bottom: 30px;
         margin-bottom: 10px;
 
-    }
-
-    // ЗАГОЛОВОК БЛОКА С НОВОСТЯМИ
-    &__title {
-        display: flex;
-        justify-content: center;
-
-        padding: 100px 0 20px 0;
-        font-family: "Montserrat";
-        font-size: 52px;
-        font-weight: 400;
-        font-style: normal;
-        color: rgb(220, 220, 220);
-        text-align: center;
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
     
     &__customtitle {
         text-align: left;
     }
-}
-.imagenews{
-    width: 100%;
 }
