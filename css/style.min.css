@@ -580,6 +580,9 @@ body {
 .webnews__customtitle {
   text-align: left;
 }
+.webnews__contentcustom {
+  border-bottom: 2px solid #c11a19;
+}
 
 .footer {
   width: 100%;
@@ -708,6 +711,11 @@ body {
   -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
 }
+@media screen and (max-width: 767px) {
+  .comments__name {
+    font-size: 14px;
+  }
+}
 .comments__name:focus {
   outline: none;
   border-bottom: 2px solid white;
@@ -715,11 +723,11 @@ body {
 .comments__printarea {
   resize: none;
   display: inline-block;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  overflow-x: scroll;
   width: 100%;
-  height: 36px;
-  max-height: 200px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 5px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   -webkit-box-shadow: none;
@@ -728,13 +736,15 @@ body {
   font-size: 1rem;
   font-family: "Montserrat";
   font-weight: 400;
-  border-bottom: 2px solid #c11a19;
-  margin: 5px 0 5px 0;
+  border: 2px solid #c11a19;
   -webkit-transition: border-color 0.3s linear;
   -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
-  overflow-x: scroll;
-  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .comments__printarea {
+    font-size: 14px;
+  }
 }
 .comments__printarea::-webkit-scrollbar {
   width: 0;
@@ -742,7 +752,7 @@ body {
 }
 .comments__printarea:focus {
   outline: none;
-  border-bottom: 2px solid white;
+  border: 2px solid white;
 }
 .comments__button {
   color: white;
@@ -750,33 +760,42 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #303030;
-  width: 223px;
-  height: 37px;
+  height: 30px;
+  padding: 0 10px;
   font-size: 1rem;
   font-family: "Montserrat";
   line-height: 2rem;
   font-weight: 400;
 }
-
-.contentcustom {
-  border-bottom: 2px solid #c11a19;
+@media screen and (max-width: 767px) {
+  .comments__button {
+    font-size: 14px;
+  }
 }
-
-.commentname {
+.comments__blockTitle {
   font-size: 1rem;
   font-family: "Montserrat";
   color: white;
   padding-bottom: 15px;
 }
+.comments__userName {
+  border-bottom: 1px solid rgba(48, 48, 48, 0.3725490196);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .comments__userName {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .comments__userMessage {
+    font-size: 14px;
+  }
+}
 
 .oldcomments {
-  resize: none;
-  display: inline-block;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   width: 100%;
-  height: 36px;
-  max-height: 200px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   -webkit-box-shadow: none;
@@ -784,7 +803,8 @@ body {
   color: white;
   font-size: 1rem;
   font-family: "Montserrat";
-  padding-bottom: 15px;
+  border: 1px solid rgba(48, 48, 48, 0.3725490196);
+  padding: 10px;
 }
 
 .form {

@@ -9,7 +9,7 @@
         <title>Пдд-помойка</title>
     </head>
     <body>  
-        
+
         <!-- OPEN HEADER -->
         <header class="header">
 
@@ -66,7 +66,7 @@
             <div class="container">
                     <h1 class="webnews__customtitle title">Список лекарств, из-за которых могут лишить водительских прав</h1>
                     <img class="imagenews" src="./img/imagenews1.jpg" alt="">
-                    <p class="textContent contentcustom">Состав большинства таблеток, сиропов и капель неизвестен обывателю, хотя весомую часть этих медикаментов мы потребляем ежедневно. Некоторые таблетки заметно влияют на ощущения, и автомобилисты не рискуют пить их за рулем, но есть лекарства, действие которых никак не сказывается на состоянии, кроме купирования проблемы. При хорошем самочувствии водители могут не заметить влияния на себя вредных веществ или небольших доз этилового спирта, а вот анализ крови водителя сразу же покажет присутствие запрещенных элементов.</p>
+                    <p class="textContent webnews__contentcustom">Состав большинства таблеток, сиропов и капель неизвестен обывателю, хотя весомую часть этих медикаментов мы потребляем ежедневно. Некоторые таблетки заметно влияют на ощущения, и автомобилисты не рискуют пить их за рулем, но есть лекарства, действие которых никак не сказывается на состоянии, кроме купирования проблемы. При хорошем самочувствии водители могут не заметить влияния на себя вредных веществ или небольших доз этилового спирта, а вот анализ крови водителя сразу же покажет присутствие запрещенных элементов.</p>
             </div>
         </section>
 
@@ -74,24 +74,21 @@
         <div class="comments">
             
             <div class="container">  
-                    <p class="commentname">КОМЕНТАРИИ</p>
-                    <form class="form" name="comment" action="comment.php" method="post">
-                            <p>
-                                <input  class="comments__name" type="text" name="name" placeholder="Введите ваше имя"/>
-                            </p>
-                            <p>
-                                    <textarea class="comments__printarea" placeholder="Введите текст комментария" name="text_comment" cols="30" rows="50"></textarea>
-                            </p>
-                            <p>
-                                <input type="hidden" name="page_id" value="150" />
-                                <input class="comments__button" type="submit" value="Оставить коментарий" />
-                            </p>
+                    <p class="comments__blockTitle">КОММЕНТАРИИ</p>
+                    <form class="form" name="comment" method="post">
+                        <input  class="comments__name" type="text" name="name" placeholder="Введите ваше имя"/>
+                            <textarea class="comments__printarea" placeholder="Введите текст комментария" name="text_comment" cols="30" rows="50"></textarea>
+                        <input type="hidden" name="page_id" value="150" />
+                        <input class="comments__button" type="submit" value="Оставить комментарий" />
                     </form>
 
                     <div class="oldcomments">
-                        <a>ОСТАВЛЕННЫЕ КОММЕНТАРИИ:<br></a>
-                        <a>Саня:</a>
-                        <a>вы зачем такой сайт сделали ?</a>
+                        <div class="comments__userName">
+                            <p>Иван Иванович</p>
+                        </div>
+                        <div class="comments__userMessage">
+                            <p>Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения Текст сообщения</p>
+                        </div>
                     </div>
             </div>
 
